@@ -95,7 +95,7 @@ class Property2SqlHandler extends DefaultHandler
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
+    public void startElement(String uri, String localName, String qname, Attributes attributes) throws SAXException
     {
         if (rows.size() == rowsToSql)
         {
@@ -103,7 +103,7 @@ class Property2SqlHandler extends DefaultHandler
             rows.clear();
         }
 
-        if (qName.equals(qualifiedName))
+        if (qname.equals(qualifiedName))
         {
             Map<String, String> row = new HashMap<>();
 
@@ -116,21 +116,21 @@ class Property2SqlHandler extends DefaultHandler
         }
 
         // sub-element
-        if (xmlAttributes.contains(qName))
+        if (xmlAttributes.contains(qname))
         {
-            subElementStack.addLast(qName);
+            subElementStack.addLast(qname);
         }
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException
+    public void endElement(String uri, String localName, String qname) throws SAXException
     {
         if (!subElementStack.isEmpty())
         {
             rowStack.getLast().put(subElementStack.getLast(), subElementTextStack.getLast().toString());
         }
 
-        if (qName.equals(qualifiedName))
+        if (qname.equals(qualifiedName))
         {
             rows.add(rowStack.getLast());
             rowStack.removeLast();

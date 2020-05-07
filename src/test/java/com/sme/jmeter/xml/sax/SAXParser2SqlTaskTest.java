@@ -46,7 +46,8 @@ public class SAXParser2SqlTaskTest extends Assertions
 
     private SAXParser2SqlTask createTask(boolean inBatch)
     {
-        final String xmlColsMap = "t:elapsedTime;it:idleTime;lt:latencyTime;ct:connectTime;ts:timeStamp;s:successFlag;lb:label;rc:responseCode;rm:responseMessage;tn:threadName;dt:dataType;by:bytes;sby:sentBytes;ng:activeThreadsInGroup;na:activeThreadsInAllGroups;hn:hostName;xt:xTrack;java.net.URL:request";
+        final String xmlColsMap = "t:elapsedTime;it:idleTime;lt:latencyTime;ct:connectTime;ts:timeStamp;s:successFlag;lb:label;rc:responseCode;rm:responseMessage;"
+            + "tn:threadName;dt:dataType;by:bytes;sby:sentBytes;ng:activeThreadsInGroup;na:activeThreadsInAllGroups;hn:hostName;xt:xTrack;java.net.URL:request";
         final String primaryColsMap = "site=www.sme.home.com;buildId=101";
 
         SAXParser2SqlTask saxParser2Sql = new SAXParser2SqlTask();
@@ -199,7 +200,8 @@ public class SAXParser2SqlTaskTest extends Assertions
     @Test
     public void test_large_file_parser() throws Exception
     {
-        final String xmlColsMap = "t:elapsedTime;it:idleTime;lt:latencyTime;ct:connectTime;ts:timeStamp;s:successFlag;lb:label;rc:responseCode;rm:responseMessage;tn:threadName;dt:dataType;by:bytes;sby:sentBytes;ng:activeThreadsInGroup;na:activeThreadsInAllGroups;hn:hostName;xt:xTrack;java.net.URL:request";
+        final String xmlColsMap = "t:elapsedTime;it:idleTime;lt:latencyTime;ct:connectTime;ts:timeStamp;s:successFlag;lb:label;rc:responseCode;rm:responseMessage;"
+            + "tn:threadName;dt:dataType;by:bytes;sby:sentBytes;ng:activeThreadsInGroup;na:activeThreadsInAllGroups;hn:hostName;xt:xTrack;java.net.URL:request";
         final String primaryColsMap = "site=www.sme.home.com;buildId=110";
 
         SAXParser2SqlTask saxParser2Sql = new SAXParser2SqlTask();

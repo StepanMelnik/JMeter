@@ -162,6 +162,8 @@ public class SAXParser2SqlTask extends Task
     }
 
     /**
+     * Prepares sql runner for test purpose.
+     * 
      * @VisibleForTesting
      * @return Returns sql runner to perform extra sql data.
      */
