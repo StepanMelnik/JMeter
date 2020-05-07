@@ -1,0 +1,11 @@
+/.classpath
+/.project
+/xml2sql.log
+/test_xml2sql.log
+/.idea/
+/.settings/
+/.checkstyle
+/target/
+/bin/
+/build/
+ 
