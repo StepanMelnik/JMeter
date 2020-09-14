@@ -58,7 +58,7 @@
         <application.name>JMeter Xml2Sql</application.name>
 
 
-        <ant.version>1.9.4</ant.version>
+        <ant.version>1.9.15</ant.version>
 
         <commons-dbutils.version>1.7</commons-dbutils.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
